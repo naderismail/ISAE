@@ -3,9 +3,9 @@ Pour pouvoir lancer ce TP en local, il va falloir suivre les instructions suivan
 
   * Installer virtualBox
 
-1) Téléchargez le fichier d’installation sur le site officiel de [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+1) Télécharger le fichier d’installation sur le site officiel de [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
-2) Exécutez-le
+2) Exécuter-le
 
 Il vous sera peut-être demandé d’installer des pilotes, car VirtualBox va créer une ou plusieurs cartes réseaux virtuelles
 
@@ -13,7 +13,7 @@ Il vous sera peut-être demandé d’installer des pilotes, car VirtualBox va cr
 Lien: https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170
 <center><img src="TPs/img/install/dep_c++.PNG"></center>
 
-5) Suivez la procédure en laissant les paramètres par défaut.
+5) Appliquer la procédure en laissant les paramètres par défaut.
 
   * Télécharger l'image [ISO Ubuntu](https://www.linuxvmimages.com/images/ubuntu-2004/#ubuntu-20044)
 
