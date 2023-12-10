@@ -426,7 +426,7 @@ Une fois le projet créé, modifier le fichier pom.xml pour qu'il ressemble à c
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>tn.insat.tp3.SparkKafkaWordCount</mainClass>
+                            <mainClass>tp3.SparkKafkaWordCount</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -442,10 +442,10 @@ Une fois le projet créé, modifier le fichier pom.xml pour qu'il ressemble à c
 ```
 Le plugin _maven-assembly-plugin_ est utile pour pouvoir créer un jar contenant toutes les dépendances du projet.
 
-Créer ensuite un package _tn.insat.tp3_ et une classe _SparkKafkaWordCount_. Le code de cette classe sera comme suit:
+Créer ensuite un package _tp3_ et une classe _SparkKafkaWordCount_. Le code de cette classe sera comme suit:
 
 ```Java
-package tn.insat.tp3;
+package tp3;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.streaming.Duration;
@@ -523,7 +523,7 @@ Dans le répertoire target, un fichier stream-kafka-spark-1-jar-with-dependencie
 Revenir à votre contenaire master, et lancer la commande spark-submit pour lancer l'écouteur de streaming spark.
 
 ```bash
-spark-submit --class tn.insat.tp3.SparkKafkaWordCount
+spark-submit --class tp3.SparkKafkaWordCount
              --master local[2]
              stream-kafka-spark-1-jar-with-dependencies.jar
              localhost:2181 test Hello-Kafka 1 >> out

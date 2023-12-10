@@ -190,7 +190,7 @@ Nous allons dans cette partie créer un projet Spark Batch en Java (un simple Wo
         </dependency>
     </dependencies>
   ```
-  3. Sous le répertoire java, créer un package que vous appellerez _tn.insat.tp21_, et dedans, une classe appelée _WordCountTask_.
+  3. Sous le répertoire java, créer un package que vous appellerez _tp21_, et dedans, une classe appelée _WordCountTask_.
   4. Écrire le code suivant dans _WordCountTask_ (N'oubliez pas de rajouter les imports nécessaires!):
   ```java
   import org.apache.spark.SparkConf;
@@ -310,7 +310,7 @@ Si tout se passe bien, vous devriez trouver, dans le répertoire _output_, deux 
 
 Nous allons maintenant tester le comportement de _spark-submit_ si on l'exécute en mode _cluster_ sur YARN. Pour cela, exécuter le code suivant:
 ```Bash hl_lines="2 3"
-  spark-submit  --class tn.insat.tp21.WordCountTask
+  spark-submit  --class tp21.WordCountTask
                 --master yarn
                 --deploy-mode cluster
                 --driver-memory 4g --executor-memory 2g --executor-cores 1

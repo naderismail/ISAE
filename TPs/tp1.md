@@ -181,7 +181,7 @@ Commençons par créer un projet Maven dans IntelliJ IDEA. Nous utiliserons dans
   </dependencies>
 ```
 
-  * Créer un package _tn.insat.tp1_ sous le répertoire _src/main/java_
+  * Créer un package _tp1_ sous le répertoire _src/main/java_
   * Créer la classe _TokenizerMapper_, contenant ce code:
 
 ```java
@@ -283,7 +283,7 @@ Dans votre projet sur IntelliJ:
   Hello Hadoop!
 ```
   * Créer une configuration de type _Application_ (_Run->Edit Configurations...->+->Application_).
-  * Définir comme **Main Class**: tn.insat.tp1.WordCount, et comme **Program Arguments**: ```src/main/resources/input/file.txt src/main/resources/output```
+  * Définir comme **Main Class**: tp1.WordCount, et comme **Program Arguments**: ```src/main/resources/input/file.txt src/main/resources/output```
   * Lancer le programme. Un répertoire _output_ sera créé dans le répertoire _resources_, contenant notamment un fichier _part-r-00000_, dont le contenu devrait être le suivant:
 
 ```
@@ -295,7 +295,7 @@ Wordcount!	1
 #### Lancer Map Reduce sur le cluster
 Dans votre projet IntelliJ:
 
-  * Créer une configuration Maven avec la ligne de commande: ```package install```
+  * Créer une configuration Maven avec la ligne de commande: ```mvn package install```
   * Lancer la configuration. Un fichier _wordcount-1.jar_ sera créé dans le répertoire _target_ du projet.
   * Copier le fichier jar créé dans le contenaire master. Pour cela:
     - Ouvrir le terminal sur le répertoire du projet. Cela peut être fait avec IntelliJ en ouvrant la vue _Terminal_ située en bas à gauche de la fenêtre principale.
@@ -308,7 +308,7 @@ Dans votre projet IntelliJ:
   * Revenir au shell du contenaire master, et lancer le job map reduce avec cette commande:
 
 ```Bash
-  hadoop jar wordcount-1.jar tn.insat.tp1.WordCount input output
+  hadoop jar wordcount-1.jar tp1.WordCount input output
 ```
 
 Le Job sera lancé sur le fichier _purchases.txt_ que vous aviez préalablement chargé dans le répertoire _input_ de HDFS. Une fois le Job terminé, un répertoire _output_ sera créé. Si tout se passe bien, vous obtiendrez un affichage ressemblant au suivant:

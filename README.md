@@ -46,4 +46,19 @@ Lien: https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?v
   git config --global user.name "Nom Prénom"
   git config --global user.email ""
 ```
+* installer [java8](https://www.oracle.com/java/technologies/downloads/#java8)
+```Bash
+  sudo apt-get update
+  sudo apt install java-package
+  make-jpkg jdk-8u391-linux-x64.tar.gz
+  sudo dpkg -i oracle-java8-jdk_8u391_amd64.deb
+  sudo update-alternatives --config java
+  java -version
 
+  sudo nano /etc/environment et collez la ligne suivante à la fin du fichier: JAVA_HOME="/usr/lib/jvm/oracle-java8-jdk-amd64/jre/bin/java"
+  source /etc/environment
+```
+* installer Maven:
+```Bash
+  sudo apt-get install maven
+```
