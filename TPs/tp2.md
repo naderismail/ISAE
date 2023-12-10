@@ -246,7 +246,7 @@ Pour tester le code sur votre machine, procéder aux étapes suivantes:
 ![Resultat Batch Local](img/tp2/resultat-batch-local.png)
 
 ### Lancement du code sur le cluster
-Pour exécuter le code sur le cluster, modifier comme indiqué les lignes en jaune dans ce qui suit:
+Pour exécuter le code sur le cluster, modifier le fichier comme suit:
 
 ```java hl_lines="11 12 18"
 public class WordCountTask {
