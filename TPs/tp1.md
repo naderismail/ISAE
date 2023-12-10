@@ -15,7 +15,11 @@ Initiation au framework hadoop et au patron MapReduce, utilisation de docker pou
 <center><img src="img/tp1/hadoop.png" width="200"></center>
 
 ### Hadoop et Docker
-Pour déployer le framework Hadoop, nous allons utiliser des contenaires [Docker](https://www.docker.com/). L'utilisation des contenaires va garantir la consistance entre les environnements de développement et permettra de réduire considérablement la complexité de configuration des machines (dans le cas d'un accès natif) ainsi que la lourdeur d'exécution (si on opte pour l'utilisation d'une machine virtuelle).
+Pour déployer le framework Hadoop, nous allons utiliser des contenaires [Docker](https://www.docker.com/): c'est un logiciel libre permettant facilement de lancer des applications dans des conteneurs logiciels.
+L'utilisation des contenaires va garantir la consistance entre les environnements de développement et permettra de réduire considérablement la complexité de configuration des machines (dans le cas d'un accès natif) ainsi que la lourdeur d'exécution (si on opte pour l'utilisation d'une machine virtuelle).
+
+<center><img src="img/tp1/docker.png" width="200"></center>
+<img src="img/tp1/work_docker.svg">
 
 Nous avons pour le déploiement des ressources de ce TP suivi les instructions présentées [ici](https://github.com/kiwenlau/hadoop-cluster-docker).
 
@@ -29,7 +33,8 @@ Vous devez pour cela avoir installé docker sur votre machine, et l'avoir correc
   docker pull naderismail1991/spark-hadoop-kafka:latest
 ```
 2. Créer les trois contenaires à partir de l'image téléchargée. Pour cela:
-   2.1. Créer un réseau qui permettra de relier les trois contenaires:
+   
+    2.1. Créer un réseau qui permettra de relier les trois contenaires:
     ``` Bash
       docker network create --driver=bridge hadoop
     ```
@@ -47,7 +52,7 @@ Vous devez pour cela avoir installé docker sur votre machine, et l'avoir correc
             --name hadoop-slave2 --hostname hadoop-slave2 \
                   naderismail1991/spark-hadoop-kafka:latest
     ```
-   3. Entrer dans le contenaire master pour commencer à l'utiliser.
+   2.3. Entrer dans le contenaire master pour commencer à l'utiliser.
 
     ```Bash
         docker exec -it hadoop-master bash
@@ -76,8 +81,7 @@ Toutes les commandes interagissant avec le système Hadoop commencent par hadoo
   hadoop fs –mkdir -p input
 ```
 
-!!! bug "Erreur"
-    Si pour une raison ou une autre, vous n'arrivez pas à créer le répertoire _input_, avec un message ressemblant à ceci: ```ls: `.': No such file or directory```, veiller à construire l'arborescence de l'utilisateur principal (root), comme suit:
+Si pour une raison ou une autre, vous n'arrivez pas à créer le répertoire _input_, avec un message ressemblant à ceci: ```ls: `.': No such file or directory```, veiller à construire l'arborescence de l'utilisateur principal (root), comme suit:
 
     ``` hadoop fs -mkdir -p /user/root```
 
