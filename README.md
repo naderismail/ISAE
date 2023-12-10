@@ -55,7 +55,7 @@ Lien: https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?v
   sudo update-alternatives --config java
   java -version
 
-  sudo nano /etc/environment et collez la ligne suivante à la fin du fichier: JAVA_HOME="/usr/lib/jvm/oracle-java8-jdk-amd64/jre/bin/java"
+  sudo nano /etc/environment et coller la ligne suivante à la fin du fichier: JAVA_HOME="/usr/lib/jvm/oracle-java8-jdk-amd64/jre/bin/java"
   source /etc/environment
 ```
 * installer Maven:
